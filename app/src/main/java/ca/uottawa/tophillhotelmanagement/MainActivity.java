@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.view.MenuItem;
+import android.widget.Toolbar;
+
 import java.util.Arrays;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
 
 
         Button MEGABUTTON = (Button) findViewById(R.id.megaButton);
