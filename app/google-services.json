@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1046632188092-nj7clbdietdjr0nc0lsb3p1rq2v8hovr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.uottawa.tophillhotelmanagement",
+            "certificate_hash": "ffac905106530526c3fd7f0a63aadd328957bd86"
+          }
+        },
+        {
           "client_id": "1046632188092-128bvhhq5hs19ie8i8evt0no224n3cq3.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046632188092-128bvhhq5hs19ie8i8evt0no224n3cq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
