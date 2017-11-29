@@ -33,18 +33,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button MEGABUTTON = (Button) findViewById(R.id.megaButton);
-        MEGABUTTON.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Toast.makeText(MainActivity.this, "You SUCK!",
-                        Toast.LENGTH_LONG).show();
-
-            }
-        });
-
-
         //initialize Firebase staff
         mFirebaseAuth = FirebaseAuth.getInstance();
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
