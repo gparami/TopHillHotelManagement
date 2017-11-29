@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.view.MenuItem;
+import android.widget.Toolbar;
+
 import java.util.Arrays;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,18 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        Button MEGABUTTON = (Button) findViewById(R.id.megaButton);
-        MEGABUTTON.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Toast.makeText(MainActivity.this, "You SUCK!",
-                        Toast.LENGTH_LONG).show();
-
-            }
-        });
 
 
         //initialize Firebase staff
@@ -84,19 +75,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+        @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.app_bar, menu);
+        return true;
+    }
 
-    //sighing out is coming soon
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//      switch (item.getItemId()) {
-//                  case R.id.sign_out_menu:
-//                            AuthUI.getInstance().signOut(this);
-//                            return true;
-//                    default:
-//                            return super.onOptionsItemSelected(item);
-//               }
-//}
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+                  case R.id.logout:
+                            AuthUI.getInstance().signOut(this);
+                            return true;
+                    default:
+                            return super.onOptionsItemSelected(item);
+        }
+  //      return super.onOptionsItemSelected(item);
+    }
 
     //adding and removing listener if activity is on the background
     @Override
