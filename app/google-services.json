@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1046632188092",
+    "firebase_url": "https://hotel-dd380.firebaseio.com",
+    "project_id": "hotel-dd380",
+    "storage_bucket": "hotel-dd380.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046632188092:android:0ee018b4dd51432c",
+        "android_client_info": {
+          "package_name": "ca.uottawa.tophillhotelmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046632188092-nj7clbdietdjr0nc0lsb3p1rq2v8hovr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.uottawa.tophillhotelmanagement",
+            "certificate_hash": "ffac905106530526c3fd7f0a63aadd328957bd86"
+          }
+        },
+        {
+          "client_id": "1046632188092-128bvhhq5hs19ie8i8evt0no224n3cq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS8kkXETVG-LXNLIUO-g4UDCbn-mc-g54"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046632188092-128bvhhq5hs19ie8i8evt0no224n3cq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
