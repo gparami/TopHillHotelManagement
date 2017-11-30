@@ -1,6 +1,38 @@
 <resources>
     <string name="app_name">Top Hill Hotel Management</string>
     <string name="john_doe">John Doe</string>
+    <string name="john_doe_username">johndoe</string>
+    <string name="john_doe_password">123johndoe1990</string>
     <string name="cleaning_department_manager">Cleaning Department Manager</string>
     <string name="unassigned">Unassigned</string>
+    <string name="profile_edit">Edit Profile</string>
+
+    <!--Profile Form-->
+
+    <string name="profile_form">Profile</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_username">Username</string>
+    <string name="profile_password">Password</string>
+    <string name="profile_department">Department</string>
+    <string name="profile_role">Role</string>
+    <string name="profile_button">Save</string>
+
+    <!--Spinner Drop-down for Department-->
+
+    <string-array name="department_array">
+        <item>Cleaning Department</item>
+        <item>Security Department</item>
+        <item>Restaurant Department</item>
+        <item>Events Department</item>
+        <item>Reception Department</item>
+        <item>Booking Department</item>
+    </string-array>
+
+    <!--Spinner Drop-down for Role-->
+
+    <string-array name="role_array">
+        <item>Manager</item>
+        <item>Employee</item>
+    </string-array>
+
 </resources>

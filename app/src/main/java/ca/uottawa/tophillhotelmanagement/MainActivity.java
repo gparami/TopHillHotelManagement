@@ -32,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Click listener for edit profile
+
+        Button submission = (Button) findViewById(R.id.edit_profile_post);
+        submission.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(MainActivity.this,EditProfile.class);
+                    startActivity(i);
+                }
+        });
 
         //initialize Firebase staff
         mFirebaseAuth = FirebaseAuth.getInstance();

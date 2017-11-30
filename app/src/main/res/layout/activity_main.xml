@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ca.uottawa.tophillhotelmanagement.ProfileView"
+    tools:context="ca.uottawa.tophillhotelmanagement.MainActivity"
     android:background="@color/graylight"
     android:orientation="vertical">
     <RelativeLayout
@@ -148,6 +148,7 @@
         android:text="My Tasks"/>
 
     <Button
+        android:id="@+id/edit_profile_post"
         android:textColor="#fff"
         android:background="@drawable/buttonstyle"
         android:layout_marginTop="10dp"
