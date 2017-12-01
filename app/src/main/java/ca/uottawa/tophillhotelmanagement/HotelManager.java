@@ -11,4 +11,6 @@ public class HotelManager extends Personnel {
         super( _n, _email, _pic);
 
     }
+
+
 }

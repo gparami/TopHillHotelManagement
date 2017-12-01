@@ -17,4 +17,5 @@ public class Manager extends Personnel {
         return myDepartment;
     }
 
+
 }
