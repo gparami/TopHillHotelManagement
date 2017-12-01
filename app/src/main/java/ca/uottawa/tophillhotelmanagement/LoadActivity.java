@@ -48,14 +48,11 @@ public class LoadActivity extends AppCompatActivity {
                     // Toast.makeText(MainActivity.this, "You are now sighned in.", Toast.LENGTH_SHORT).show();
                     onSignedInInitialize(user.getDisplayName());
 
-                    if (Objects.equals(user.getUid(), "YAChcD8DvUUK3c8ys4rHmjI0hQ82")) {
+                    if (Objects.equals(user.getEmail(), "admin@tophill.ca")) {
                         Intent launchNewIntent = new Intent(LoadActivity.this,HotelManagerActivity.class);
                         startActivityForResult(launchNewIntent, 0);
-                    } else if (Objects.equals(user.getUid(), "yPiL1J5C6jVxav1efOPXg2havCz2")) {
-                        Intent launchNewIntent = new Intent(LoadActivity.this,MainActivity.class);
-                        startActivityForResult(launchNewIntent, 0);
-                    } else if (Objects.equals(user.getUid(), "2UY9YnGZWCcGrCKdeC9x85mD9dz1")) {
-                        Intent launchNewIntent = new Intent(LoadActivity.this,MainActivity.class);
+                    } else if (Objects.equals(user.getEmail(), "manager@tophill.ca")) {
+                        Intent launchNewIntent = new Intent(LoadActivity.this, MainActivity.class);
                         startActivityForResult(launchNewIntent, 0);
                     }
 
