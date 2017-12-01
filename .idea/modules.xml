@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TopHillHotelManagement.iml" filepath="$PROJECT_DIR$/TopHillHotelManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TopHillHotelManagement.iml" filepath="$PROJECT_DIR$/.idea/TopHillHotelManagement.iml" />
+      <module fileurl="file://C:\AndroidStudioProjects\TopHillHotelManagement\TopHillHotelManagement.iml" filepath="C:\AndroidStudioProjects\TopHillHotelManagement\TopHillHotelManagement.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\AndroidStudioProjects\TopHillHotelManagement\app\app.iml" filepath="C:\AndroidStudioProjects\TopHillHotelManagement\app\app.iml" />
     </modules>
   </component>
 </project>

@@ -13,5 +13,6 @@ public class Employee extends Personnel {
     Employee(String _n, String _email, int _pic, Department d){
         super( _n, _email, _pic);
         myDepartment = d;
+        d.addEmployee(this);
     }
 }
