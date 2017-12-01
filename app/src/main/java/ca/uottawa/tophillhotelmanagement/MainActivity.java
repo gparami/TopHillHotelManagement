@@ -18,7 +18,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.firebase.ui.auth.AuthUI;
 
 public class MainActivity extends AppCompatActivity {
-Task newTask = Task();
+
+    //Atrem's Test Code
+    //Task newTask = Task();
 
     //Firebase staff is here
     private FirebaseAuth mFirebaseAuth;
