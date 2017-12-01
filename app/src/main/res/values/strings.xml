@@ -5,4 +5,10 @@
     <string name="hotel_manager">Hotel Manager</string>
     <string name="unassigned">Unassigned</string>
     <string name="log_out">Log out</string>
+    <string name="employee_form_name">Employee Name</string>
+    <string name="employee_form_username">Username</string>
+    <string name="employee_form_password">Password</string>
+    <string name="employee_form_department">Department</string>
+    <string name="employee_form_role">Role</string>
+    <string name="employee_form_save">Save</string>
 </resources>
