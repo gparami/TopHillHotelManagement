@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.app_bar, menu);
         return true;
     }
-
+    //dropdown menu logic
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-  //      return super.onOptionsItemSelected(item);
     }
 
     //adding and removing listener if activity is on the background
