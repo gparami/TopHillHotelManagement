@@ -7,6 +7,7 @@
     <string name="hotel_manager">Hotel Manager</string>
     <string name="unassigned">Unassigned</string>
     <string name="profile_edit">Edit Profile</string>
+    <string name="log_out">Log out</string>
 
     <!--Profile Form-->
 
