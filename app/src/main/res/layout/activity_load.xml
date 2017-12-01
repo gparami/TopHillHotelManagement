@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.uottawa.tophillhotelmanagement.LoadActivity">
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradientbackground"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteY="3dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:text="Loading Profile"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=   "Use one of the following accounts.\n\nHotel Manager\n     email: admin@tophill.ca \n     pwd: tophilladmin\n\nManager\n     email: manager@tophill.ca\n     pwd: tophilladmin" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+<!--
+<TextView
+android:layout_marginTop="1dp"
+android:layout_gravity="center_horizontal"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/cleaning_department_manager"
+android:textColor="#fff"
+android:textStyle="bold"
+android:textSize="18sp" />-->

@@ -89,10 +89,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.logout:
                 AuthUI.getInstance().signOut(this);
                 return true;
-            case R.id.goAdmin:
-                Intent launchNewIntent = new Intent(MainActivity.this,HotelManagerActivity.class);
-                startActivityForResult(launchNewIntent, 0);
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
