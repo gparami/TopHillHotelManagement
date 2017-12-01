@@ -1,20 +1,27 @@
 package ca.uottawa.tophillhotelmanagement;
 
-import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+        import android.content.Intent;
+        import android.support.annotation.NonNull;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.Menu;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.Toast;
+        import android.view.MenuItem;
+        import android.widget.Toolbar;
 
-import com.firebase.ui.auth.AuthUI;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+        import java.util.Arrays;
+        import java.util.Objects;
 
-import java.util.Arrays;
-import java.util.Objects;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
+        import com.firebase.ui.auth.AuthUI;
 
-public class HotelManagerActivity extends AppCompatActivity {
+public class LoadActivity extends AppCompatActivity {
+
+    //Atrem's Test Code
+    //Task newTask = Task();
 
     //Firebase staff is here
     private FirebaseAuth mFirebaseAuth;
@@ -26,7 +33,7 @@ public class HotelManagerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hotel_manager);
+        setContentView(R.layout.activity_load);
 
 
         //initialize Firebase staff
@@ -40,6 +47,22 @@ public class HotelManagerActivity extends AppCompatActivity {
                     //user is signed in
                     // Toast.makeText(MainActivity.this, "You are now sighned in.", Toast.LENGTH_SHORT).show();
                     onSignedInInitialize(user.getDisplayName());
+
+                    if (Objects.equals(user.getUid(), "YAChcD8DvUUK3c8ys4rHmjI0hQ82")) {
+                        Intent launchNewIntent = new Intent(LoadActivity.this,HotelManagerActivity.class);
+                        startActivityForResult(launchNewIntent, 0);
+                    } else if (Objects.equals(user.getUid(), "yPiL1J5C6jVxav1efOPXg2havCz2")) {
+                        Intent launchNewIntent = new Intent(LoadActivity.this,MainActivity.class);
+                        startActivityForResult(launchNewIntent, 0);
+                    } else if (Objects.equals(user.getUid(), "2UY9YnGZWCcGrCKdeC9x85mD9dz1")) {
+                        Intent launchNewIntent = new Intent(LoadActivity.this,MainActivity.class);
+                        startActivityForResult(launchNewIntent, 0);
+                    }
+                    else {
+                        Intent launchNewIntent = new Intent(LoadActivity.this,LoadActivity.class);
+                        startActivityForResult(launchNewIntent, 0);
+                    }
+
                 } else {
                     //user is not sighned out
                     onSignedOutCleanup();
@@ -55,9 +78,22 @@ public class HotelManagerActivity extends AppCompatActivity {
                 }
             }
         };
-
     }
-
+    //dealing with canceling during singing
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RC_SIGN_IN) {
+            if (resultCode == RESULT_OK) {
+                // Sign-in succeeded, set up the UI
+                Toast.makeText(this, "Signed in!", Toast.LENGTH_SHORT).show();
+            } else if (resultCode == RESULT_CANCELED) {
+                // Sign in was canceled by the user, finish the activity
+                Toast.makeText(this, "Sign in canceled", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.app_bar, menu);

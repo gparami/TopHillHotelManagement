@@ -17,11 +17,4 @@
 
         />
 
-    <item
-        android:id="@+id/goAdmin"
-        app:showAsAction="never"
-        android:title="Admin Area"
-
-        />
-
 </menu>
