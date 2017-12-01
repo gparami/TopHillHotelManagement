@@ -58,10 +58,6 @@ public class LoadActivity extends AppCompatActivity {
                         Intent launchNewIntent = new Intent(LoadActivity.this,MainActivity.class);
                         startActivityForResult(launchNewIntent, 0);
                     }
-                    else {
-                        Intent launchNewIntent = new Intent(LoadActivity.this,LoadActivity.class);
-                        startActivityForResult(launchNewIntent, 0);
-                    }
 
                 } else {
                     //user is not sighned out
