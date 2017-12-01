@@ -2,5 +2,7 @@
     <string name="app_name">Top Hill Hotel Management</string>
     <string name="john_doe">John Doe</string>
     <string name="cleaning_department_manager">Cleaning Department Manager</string>
+    <string name="hotel_manager">Hotel Manager</string>
     <string name="unassigned">Unassigned</string>
+    <string name="log_out">Log out</string>
 </resources>

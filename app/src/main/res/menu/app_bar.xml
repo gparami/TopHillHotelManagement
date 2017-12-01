@@ -13,7 +13,14 @@
     <item
         android:id="@+id/logout"
         app:showAsAction="never"
-        android:title="Log out"
+        android:title="@string/log_out"
+
+        />
+
+    <item
+        android:id="@+id/goAdmin"
+        app:showAsAction="never"
+        android:title="Admin Area"
 
         />
 
