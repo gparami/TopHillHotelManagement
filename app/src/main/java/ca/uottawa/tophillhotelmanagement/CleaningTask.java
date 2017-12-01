@@ -5,4 +5,7 @@ package ca.uottawa.tophillhotelmanagement;
  */
 
 public class CleaningTask extends Task {
+    CleaningTask(Priority _p, Personnel _person){
+        super(_p, _person);
+    }
 }
