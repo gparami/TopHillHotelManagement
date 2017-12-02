@@ -35,7 +35,7 @@ public class CreateEmployee extends AppCompatActivity {
         employee_department.setAdapter(adapter);
         employee_role.setAdapter(adapter1);
 
-        Button submission = (Button) findViewById(R.id.profile_post);
+        Button submission = (Button) findViewById(R.id.employee_post);
         submission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
