@@ -1,7 +1,7 @@
 package ca.uottawa.tophillhotelmanagement;
 
 import java.util.ArrayList;
-import java.util.Vector;
+import java.util.Date;
 
 /**
  * Created by parami on 2017-11-29.
@@ -10,28 +10,25 @@ import java.util.Vector;
 public class Department {
 
 
-    public String departmentName;
-    public Personnel manager;
-    private ArrayList<Personnel> deptEmployees ;
-    private ArrayList<Task> deptTasks;
 
-    public Department(){
-        deptEmployees = new ArrayList<>();
-        deptTasks = new ArrayList<>();
+
+
+    private String departmentName;
+    private Personnel manager;
+    private ArrayList<Personnel> deptEmployees;
+    private ArrayList<Task> deptTasks ;
+
+    public String getDepartmentName(){return departmentName;}
+    public Manager getDepartmentManager(){return (Manager)manager;}
+
+    public Task createTask(String taskToName, Priority priority, Date date){return new Task(taskToName,priority,date);}
+    public void addTask(Task in){deptTasks.add(in);}
+    public ArrayList<Task>getTasks(){return new ArrayList<Task>(deptTasks);}
+    public Task removeTasks(Task toRemove){
+        if (deptTasks.contains(toRemove)){return deptTasks.remove(deptTasks.indexOf(toRemove));}
+        else{return null;}
     }
 
-    public void addTask(Task toAdd){
-        deptTasks.add(toAdd);
-    }
-
-    public ArrayList<Task> getAllTasks(){
-        return new ArrayList<Task>(deptTasks);
-    }
-
-
-    public Task createTask(){
-        return null;
-    }
 
     public void addEmployee(Employee empl){
         int pos = 0;
