@@ -11,8 +11,8 @@ public class Department {
 
     private String departmentName;
     private Personnel manager;
-    private ArrayList<Personnel> deptEmployees;
-    private ArrayList<Task> deptTasks ;
+    private ArrayList<Personnel> deptEmployees = new ArrayList<>();
+    private ArrayList<Task> deptTasks = new ArrayList<>() ;
 
     public String getDepartmentName(){return departmentName;}
     public Manager getDepartmentManager(){return (Manager)manager;}
@@ -24,11 +24,12 @@ public class Department {
         if (deptTasks.contains(toRemove)){return deptTasks.remove(deptTasks.indexOf(toRemove));}
         else{return null;}
     }
+    public Department(){
+    }
     public Department(String name, Personnel manager){
         this.departmentName=name;
         this.manager=manager;
     }
-
     public void addEmployee(Employee empl){
         int pos = 0;
         String name = empl.getName();
