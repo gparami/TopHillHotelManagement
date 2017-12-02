@@ -45,7 +45,7 @@ public class LoadActivity extends AppCompatActivity {
                 //check if logined in
                 if (user != null) {
                     //user is signed in
-                    // Toast.makeText(MainActivity.this, "You are now sighned in.", Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(MainActivity.this, "You are now signed in.", Toast.LENGTH_SHORT).show();
                     onSignedInInitialize(user.getDisplayName());
 
                     if (Objects.equals(user.getEmail(), "admin@tophill.ca")) {
@@ -71,6 +71,7 @@ public class LoadActivity extends AppCompatActivity {
                 }
             }
         };
+
     }
     //dealing with canceling during singing
     @Override
@@ -98,6 +99,7 @@ public class LoadActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.logout:
                 AuthUI.getInstance().signOut(this);
+                mFirebaseAuth.signOut();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -128,6 +130,5 @@ public class LoadActivity extends AppCompatActivity {
         mUsername = ANONYMUS;
         //destruction before loging out
     }
-
 
 }
