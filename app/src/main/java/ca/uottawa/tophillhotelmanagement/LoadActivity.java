@@ -12,6 +12,8 @@ package ca.uottawa.tophillhotelmanagement;
         import android.widget.Toolbar;
 
         import java.util.Arrays;
+        import java.util.ArrayList;
+        import java.util.LinkedList;
         import java.util.Objects;
 
         import com.google.firebase.auth.FirebaseAuth;
@@ -29,6 +31,10 @@ public class LoadActivity extends AppCompatActivity {
     public static int RC_SIGN_IN = 1;//login status
     public final String ANONYMUS = "ANANIMUS";
     private String mUsername = ANONYMUS;
+
+
+    public static LinkedList<Personnel> staffList ;
+    public static HotelManager bigGuy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +75,27 @@ public class LoadActivity extends AppCompatActivity {
                                     .build(),
                             RC_SIGN_IN);
                 }
+
+                ArrayList <Department> departments = new ArrayList<>();
+                bigGuy = new HotelManager("John Boss","admin@tophill.ca",-1,departments);
+
+                Department cleaningDept = new CleaningDept("Cleaning Department",null);
+                departments.add(cleaningDept);
+
+
+                bigGuy.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager");
+
+                //creating employees
+                bigGuy.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
+                bigGuy.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
+                bigGuy.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee");
+                bigGuy.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee");
+                bigGuy.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee");
+                bigGuy.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee");
+                bigGuy.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee");
+                bigGuy.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
+                bigGuy.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
+                staffList = bigGuy.staff;
             }
         };
 

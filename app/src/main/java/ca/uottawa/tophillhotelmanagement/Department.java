@@ -9,10 +9,6 @@ import java.util.Date;
 
 public class Department {
 
-
-
-
-
     private String departmentName;
     private Personnel manager;
     private ArrayList<Personnel> deptEmployees;
@@ -28,7 +24,10 @@ public class Department {
         if (deptTasks.contains(toRemove)){return deptTasks.remove(deptTasks.indexOf(toRemove));}
         else{return null;}
     }
-
+    public Department(String name, Personnel manager){
+        this.departmentName=name;
+        this.manager=manager;
+    }
 
     public void addEmployee(Employee empl){
         int pos = 0;
