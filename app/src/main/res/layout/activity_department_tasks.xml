@@ -7,7 +7,6 @@
     tools:context="ca.uottawa.tophillhotelmanagement.DepartmentTasks">
 
     <ListView
-        android:id="&+id/departmentTasksListView"
         android:layout_width="wrap_content"
         android:layout_height="0dp">
 
