@@ -21,7 +21,7 @@ public class departmentAdapter extends ArrayAdapter<Department> {
     Context c;
 
     public departmentAdapter(@NonNull Context context, /*@LayoutRes int resource,*/ Department[] d) {
-        super(context, R.layout.activity_department_task);//add this layout to constructor
+        super(context, R.layout.activity_department_tasks);//add this layout to constructor
         deps = d;
         c = context;
     }
@@ -38,10 +38,10 @@ public class departmentAdapter extends ArrayAdapter<Department> {
 
         if (convertView == null) {
             LayoutInflater inf = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inf.inflate(R.layout.anothercust, parent, false);/// creating new view to return
-            vH.img = (ImageView) convertView.findViewById(R.id.deaprtmentTaskAvatar);
-            vH.name = (TextView) convertView.findViewById(R.id.depatmentTaskName);
-            vH.discrip = (TextView) convertView.findViewById(R.id.deaprtmentTaskDiscription);
+            convertView = inf.inflate(R.layout.activity_department_tasks, parent, false);/// creating new view to return
+            vH.img = (ImageView) convertView.findViewById(R.id.departmentTaskAvatar);
+            vH.name = (TextView) convertView.findViewById(R.id.departmentTaskName);
+            vH.discrip = (TextView) convertView.findViewById(R.id.departmentTaskDescription);
             convertView.setTag(vH);
 
         } else {
