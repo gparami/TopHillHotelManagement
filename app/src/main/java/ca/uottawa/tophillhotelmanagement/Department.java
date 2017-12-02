@@ -12,6 +12,10 @@ public class Department {
     public ArrayList<Personnel> deptEmployees = new ArrayList<>();
     public ArrayList<Task> deptTasks = new ArrayList<>();
 
+    public Department(String name, Personnel manager){
+        this.departmentName=name;
+        this.manager=manager;
+    }
     public Task createTask(){
         return null;
     }

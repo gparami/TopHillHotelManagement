@@ -14,16 +14,17 @@ public class HotelManager extends Personnel {
     public ArrayList<Department> hotelDepartments;
     public LinkedList<Personnel> staff ;
 
-    HotelManager(String _n, String _email, int _pic, Department d, ArrayList<Department> departments){
+    HotelManager(String _n, String _email, int _pic, ArrayList<Department> departments){
         super( _n, _email, _pic);
         hotelDepartments = departments;
         staff = new LinkedList<>();
+
     }
 
     public void createEmployee(String name, String username, String department, String role){
         Iterator<Department> itr = hotelDepartments.iterator();
         Department employeeDepartment=null;
-        Personnel newPersonnel;
+        Personnel newPersonnel = null;
         while(itr.hasNext()){
             Department currentDepartment = itr.next();
             if (currentDepartment.departmentName.equals(department)){
