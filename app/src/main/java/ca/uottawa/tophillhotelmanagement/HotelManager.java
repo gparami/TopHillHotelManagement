@@ -26,7 +26,7 @@ public class HotelManager extends Personnel {
         Personnel newPersonnel;
         while(itr.hasNext()){
             Department currentDepartment = itr.next();
-            if (currentDepartment.departmentName.equals(department)){
+            if (currentDepartment.getDepartmentName().equals(department)){
                 employeeDepartment=currentDepartment;
                 break;
             }
@@ -34,7 +34,7 @@ public class HotelManager extends Personnel {
 
         if(role.equals("Manager")){
             Manager newManager = new Manager(name,username,-1,employeeDepartment);
-            employeeDepartment.manager=newManager;
+            newManager=employeeDepartment.getDepartmentManager();
             newPersonnel=newManager;
             //manager obj
             // depending on dept

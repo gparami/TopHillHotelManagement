@@ -16,6 +16,9 @@ public class Department {
     private ArrayList<Personnel> deptEmployees;
     private ArrayList<Task> deptTasks ;
 
+    public String getDepartmentName(){return departmentName;}
+    public Manager getDepartmentManager(){return (Manager)manager;}
+
     public Task createTask(String taskToName, Priority priority, Date date){return new Task(taskToName,priority,date);}
     public void addTask(Task in){deptTasks.add(in);}
     public ArrayList<Task>getTasks(){return new ArrayList<Task>(deptTasks);}
