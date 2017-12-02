@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.view.MenuItem;
 import android.widget.Toolbar;
@@ -18,10 +19,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.firebase.ui.auth.AuthUI;
 
 public class MainActivity extends AppCompatActivity {
-
-    //Atrem's Test Code
-    //Task newTask = Task();
-
     //Firebase staff is here
     private FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -33,6 +30,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //do buttons here
+        Button departments = (Button) findViewById(R.id.department_button);
+        departments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, DepartmentTasks.class);
+                startActivity(i);
+            }
+        });
 
 
         //initialize Firebase staff

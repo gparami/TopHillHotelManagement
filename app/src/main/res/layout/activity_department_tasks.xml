@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ca.uottawa.tophillhotelmanagement.DepartmentTasks">
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp">
 
-        <TextView
-            android:id="@+id/departmentTaskName"
-            android:layout_width="0dp"
-            android:layout_height="22dp"
-            android:layout_marginStart="5dp"
+    <TextView
+        android:id="@+id/departmentTaskName"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="5dp"
+        android:text="name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/departmentTasksListView" />
 
-            android:text="name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.35"
-            app:layout_constraintStart_toEndOf="@+id/departmentTasksListView"
-            tools:layout_editor_absoluteY="0dp" />
 
 
     <ImageView
@@ -45,7 +40,6 @@
         app:layout_constraintStart_toEndOf="@+id/departmentTaskAvatar"
         app:layout_constraintTop_toBottomOf="@+id/departmentTaskAvatar" />
     />
-    </ListView>
 
+</ListView>
 
-    </android.support.constraint.ConstraintLayout>
