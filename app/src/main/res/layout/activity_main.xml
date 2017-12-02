@@ -123,6 +123,7 @@
     <Button
         android:textColor="#fff"
         android:background="@drawable/buttonstyle"
+        android:id="@+id/department_button"
         android:layout_marginTop="18dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="300dp"

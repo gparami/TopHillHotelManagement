@@ -9,7 +9,6 @@ import java.util.Vector;
 
 public class Department {
 
-    private Personnel manager;
 
     public String departmentName;
     public Personnel manager;
