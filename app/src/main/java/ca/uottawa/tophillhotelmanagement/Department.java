@@ -7,10 +7,27 @@ import java.util.ArrayList;
  */
 
 public class Department {
+
+    private Personnel manager;
     public String departmentName;
     public Personnel manager;
-    public ArrayList<Personnel> deptEmployees = new ArrayList<>();
-    public ArrayList<Task> deptTasks = new ArrayList<>();
+
+    private ArrayList<Personnel> deptEmployees ;
+    private ArrayList<Task> deptTasks;
+
+    public Department(){
+        deptEmployees = new ArrayList<>();
+        deptTasks = new ArrayList<>();
+    }
+
+    public void addTask(Task toAdd){
+        deptTasks.add(toAdd);
+    }
+
+    public ArrayList<Task> getAllTasks(){
+        return new ArrayList<Task>(deptTasks);
+    }
+
 
     public Task createTask(){
         return null;
