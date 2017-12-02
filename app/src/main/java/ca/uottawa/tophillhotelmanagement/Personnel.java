@@ -8,8 +8,8 @@ import java.util.Vector;
 
 public abstract class Personnel {
 
-    String name;
-    String email;
+    private String name;
+    private String email;
     //String password; not needed, password is saved on firevase
     //public Vector<Task> deptTasks = new Vector<>(); belongs to spesific manager should be created in managers class
     int picture;
