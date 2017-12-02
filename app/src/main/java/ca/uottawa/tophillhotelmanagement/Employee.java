@@ -8,7 +8,11 @@ import java.util.Vector;
 
 public class Employee extends Personnel {
 
-    Department myDepartment;
+    private Department myDepartment;
+
+    public Department currentDepartment(){
+        return myDepartment;
+    }
 
     Employee(String _n, String _email, int _pic, Department d){
         super( _n, _email, _pic);
