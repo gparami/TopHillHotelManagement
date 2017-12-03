@@ -93,22 +93,22 @@ public class LoadActivity extends AppCompatActivity {
 
 
         hotelManager.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager");
-//        Iterator<Personnel> itr = staffList.iterator();
+        //Iterator<Personnel> itr = staffList.iterator();
         manager=cleaningDept.manager();
         currentDepartment = cleaningDept;
 
 
         //creating employees
-//        hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
-//        hotelManager.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
-//        hotelManager.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee");
-//        hotelManager.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee");
-//        hotelManager.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee");
-//        hotelManager.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee");
-//        hotelManager.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee");
-//        hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
-//        hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
-//        staffList = hotelManager.staff;
+        hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
+        staffList = hotelManager.staff;
 
     }
     //dealing with canceling during singing
