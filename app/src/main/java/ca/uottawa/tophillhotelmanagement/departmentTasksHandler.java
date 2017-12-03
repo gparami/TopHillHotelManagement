@@ -39,13 +39,13 @@ public class departmentTasksHandler extends AppCompatActivity {
                 // MediaPlayer m = MediaPlayer.create(EmployeesActivity.this, customEmployeeAdapter.staff.get(i));
                 Task task =(Task) adapter.getItem(position);
                 Intent intent = new Intent(view.getContext(), TaskHandlerActivity.class);
-                set_employee(task);
+                set_task(task);
                 startActivity(intent);
             }
         });
     }
 
-    private void set_employee(Task task){
+    private void set_task(Task task){
         ((Dataset)this.getApplication()).setCurrentTask(task);
     }
 }

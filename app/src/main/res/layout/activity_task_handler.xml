@@ -15,25 +15,10 @@
         android:paddingTop="5dp">
 
         <TextView
-            android:id="@+id/taskHandlerTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Task Information:"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/taskName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:textSize="18sp" />
-
-        <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date:"
+            android:text="Due Date:"
             android:textSize="18sp" />
 
         <EditText
@@ -51,14 +36,38 @@
             android:text="Assigned To: "
             android:textSize="18sp" />
 
-        <Spinner
-            android:id="@+id/spinner"
+        <EditText
+            android:id="@+id/taskAssignedTo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:textSize="18sp" />
 
-        <RadioGroup
+        <TextView
+            android:id="@+id/taskHandlerTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Task Information:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/taskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="342dp">
 
         <Button
             android:id="@+id/assignEmployeeButton"
@@ -84,11 +93,11 @@
             android:id="@+id/archiveTaskButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/buttonstyle"
             android:text="Archive Task"
             android:textColor="#fff" />
-
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
