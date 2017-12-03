@@ -35,13 +35,15 @@ public class HotelManager extends Personnel {
 
         if(role.equals("Manager")){
             Manager newManager = new Manager(name,username,-1,employeeDepartment);
-            newManager=employeeDepartment.getDepartmentManager();
+
+            //newManager=employeeDepartment.getDepartmentManager();
+            employeeDepartment.setManager(newManager);
             newPersonnel=newManager;
             //manager obj
             // depending on dept
         } else {
             Employee newEmployee = new Employee(name,username,-1,employeeDepartment);
-            employeeDepartment.addEmployee(newEmployee);
+            //employeeDepartment.addEmployee(newEmployee);
             newPersonnel=newEmployee;
             //construct empl object
             // depending on dept
