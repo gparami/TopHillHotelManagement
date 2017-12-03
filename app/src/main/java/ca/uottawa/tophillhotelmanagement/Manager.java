@@ -13,10 +13,18 @@ public class Manager extends Personnel {
 
 
 
-    Manager(String _n, String _email, int _pic, Department d){
+
+   public  Manager(String _n, String _email, int _pic, Department d){
     super( _n, _email, _pic);
     myDepartment = d;
     myTasks = new ArrayList<>();
+    }
+
+    public void addTask(Task task){
+       myTasks.add(task);
+    }
+    public ArrayList<Task> getTasks(){
+        return myTasks;
     }
 
     public Department getMyDepartment() {
