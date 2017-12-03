@@ -73,7 +73,6 @@ public class HotelManagerActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-        //      return super.onOptionsItemSelected(item);
     }
 
     //adding and removing listener if activity is on the background
