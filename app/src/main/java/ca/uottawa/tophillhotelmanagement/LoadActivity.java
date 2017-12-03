@@ -82,32 +82,34 @@ public class LoadActivity extends AppCompatActivity {
                             RC_SIGN_IN);
                 }
 
-                ArrayList <Department> departments = new ArrayList<>();
-                hotelManager = new HotelManager("John Boss","admin@tophill.ca",-1,departments);
 
-                Department cleaningDept = new CleaningDept("Cleaning Department",null);
-                departments.add(cleaningDept);
-
-
-                hotelManager.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager");
-                Iterator<Personnel> itr = staffList.iterator();
-                manager=cleaningDept.manager();
-                currentDepartment = cleaningDept;
-
-
-                //creating employees
-                hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
-                hotelManager.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
-                hotelManager.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee");
-                hotelManager.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee");
-                hotelManager.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee");
-                hotelManager.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee");
-                hotelManager.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee");
-                hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
-                hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
-                staffList = hotelManager.staff;
             }
         };
+
+        ArrayList <Department> departments = new ArrayList<>();
+        hotelManager = new HotelManager("John Boss","admin@tophill.ca",-1,departments);
+
+        Department cleaningDept = new CleaningDept("Cleaning Department",null);
+        departments.add(cleaningDept);
+
+
+        hotelManager.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager");
+        //Iterator<Personnel> itr = staffList.iterator();
+        manager=cleaningDept.manager();
+        currentDepartment = cleaningDept;
+
+
+        //creating employees
+        hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
+        staffList = hotelManager.staff;
 
     }
     //dealing with canceling during singing
@@ -136,7 +138,9 @@ public class LoadActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.logout:
                 AuthUI.getInstance().signOut(this);
-                mFirebaseAuth.signOut();
+
+                //mFirebaseAuth.signOut();
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
