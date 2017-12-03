@@ -82,6 +82,7 @@ public class LoadActivity extends AppCompatActivity {
                             RC_SIGN_IN);
                 }
 
+
             }
         };
 
@@ -137,7 +138,9 @@ public class LoadActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.logout:
                 AuthUI.getInstance().signOut(this);
+
                 //mFirebaseAuth.signOut();
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
