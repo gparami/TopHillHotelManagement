@@ -13,11 +13,16 @@ package ca.uottawa.tophillhotelmanagement;
 
         import java.util.Arrays;
         import java.util.ArrayList;
+        import java.util.Date;
         import java.util.Objects;
 
         import com.google.firebase.auth.FirebaseAuth;
         import com.google.firebase.auth.FirebaseUser;
         import com.firebase.ui.auth.AuthUI;
+
+        import static ca.uottawa.tophillhotelmanagement.Priority.HIGH;
+        import static ca.uottawa.tophillhotelmanagement.Priority.LOW;
+        import static ca.uottawa.tophillhotelmanagement.Priority.NORMAL;
 
 public class LoadActivity extends AppCompatActivity {
 
@@ -103,6 +108,22 @@ public class LoadActivity extends AppCompatActivity {
         hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
         hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
         staffList = hotelManager.staff;
+
+        Task t1 = new Task("Managers Meeting", HIGH, new Date(2017,12,7,5,30),manager);
+        manager.addTask(t1);
+        Task t2 = new Task("Department Report", HIGH, new Date(2017,12,12,10,0),manager);
+        manager.addTask(t2);
+        Task t3 = new Task("Staff Meeting", LOW, new Date(2017,12,15,10,0),manager);
+        manager.addTask(t3);
+        Task t4 = new Task("Meeting with VIP guest", HIGH, new Date(2017,12,20,2,0),manager);
+        manager.addTask(t4);
+        Task t5 = new Task("Hiring session", NORMAL, new Date(2017,12,29,10,0),manager);
+        manager.addTask(t5);
+        Task t6 = new Task("Buying department supplies", NORMAL, new Date(2018,1,6,8,0),manager);
+        manager.addTask(t6);
+        Task t7 = new Task("Managers Meeting", HIGH, new Date(2018,2,19,5,30),manager);
+        manager.addTask(t7);
+
 
         //
         ((Dataset) this.getApplication()).setHotelManager(hotelManager);
