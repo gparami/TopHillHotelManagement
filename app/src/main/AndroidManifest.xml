@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-<!--            <intent-filter>
+
+            <!-- intent of this activity is commented because it's not the launch activity, load activity is. -->
+            <!--
+                <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,8 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditProfile"></activity>
-        <activity android:name=".DepartmentTasks"></activity>
+        <activity android:name=".EditProfile" />
+        <activity android:name=".TaskHandlerActivity" />
+        <activity android:name=".DepartmentTasks" />
+        <activity android:name=".ReceptionistActivity"></activity>
     </application>
 
 </manifest>
