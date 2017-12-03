@@ -9,5 +9,11 @@ public class TaskHandlerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_handler);
+
+        Task currentTask;
+
+
+
+
     }
 }

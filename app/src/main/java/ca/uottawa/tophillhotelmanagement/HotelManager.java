@@ -2,7 +2,6 @@ package ca.uottawa.tophillhotelmanagement;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 
 
 /**
@@ -12,12 +11,12 @@ import java.util.LinkedList;
 public class HotelManager extends Personnel {
 
     public ArrayList<Department> hotelDepartments;
-    public LinkedList<Personnel> staff ;
+    public ArrayList<Personnel> staff ;
 
     HotelManager(String _n, String _email, int _pic, ArrayList<Department> departments){
         super( _n, _email, _pic);
         hotelDepartments = departments;
-        staff = new LinkedList<>();
+        staff = new ArrayList<>();
 
     }
 
@@ -61,6 +60,10 @@ public class HotelManager extends Personnel {
         if(pos==staff.size()){
             staff.add(newPersonnel);
         }
+    }
+
+    public void addDepartment (Department newDepartment) {
+        this.hotelDepartments.add(newDepartment);
     }
 
 

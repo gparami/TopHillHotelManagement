@@ -13,8 +13,6 @@ package ca.uottawa.tophillhotelmanagement;
 
         import java.util.Arrays;
         import java.util.ArrayList;
-        import java.util.Iterator;
-        import java.util.LinkedList;
         import java.util.Objects;
 
         import com.google.firebase.auth.FirebaseAuth;
@@ -32,12 +30,6 @@ public class LoadActivity extends AppCompatActivity {
     public static int RC_SIGN_IN = 1;//login status
     public final String ANONYMUS = "ANANIMUS";
     private String mUsername = ANONYMUS;
-
-
-    public static LinkedList<Personnel> staffList ;
-    public static HotelManager hotelManager;
-    public static Manager manager;
-    public static Department currentDepartment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,19 +77,21 @@ public class LoadActivity extends AppCompatActivity {
             }
         };
 
+
+        //Variables created to pass to the singleton Dataset (not used globally).
+        ArrayList<Personnel> staffList ;
+        HotelManager hotelManager;
+        Manager manager;
+        Department currentDepartment;
+
+        //Omar's data creation
         ArrayList <Department> departments = new ArrayList<>();
         hotelManager = new HotelManager("John Boss","admin@tophill.ca",-1,departments);
-
         Department cleaningDept = new CleaningDept("Cleaning Department",null);
         departments.add(cleaningDept);
-
-
         hotelManager.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager");
-        //Iterator<Personnel> itr = staffList.iterator();
         manager=cleaningDept.manager();
         currentDepartment = cleaningDept;
-
-
         //creating employees
         hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
         hotelManager.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
@@ -109,6 +103,12 @@ public class LoadActivity extends AppCompatActivity {
         hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
         hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
         staffList = hotelManager.staff;
+
+        //
+        ((Dataset) this.getApplication()).setHotelManager(hotelManager);
+        ((Dataset) this.getApplication()).setStaffList(staffList);
+        ((Dataset) this.getApplication()).setCurrentDepartment(currentDepartment);
+        ((Dataset) this.getApplication()).setManager(manager);
 
     }
     //dealing with canceling during singing
