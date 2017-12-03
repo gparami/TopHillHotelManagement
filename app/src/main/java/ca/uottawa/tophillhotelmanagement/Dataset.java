@@ -31,4 +31,5 @@ public class Dataset extends Application {
     public void setCurrentDepartment(Department currentDepartment) { this.currentDepartment = currentDepartment; }
     public void setCurrentTask(Task currentTask) { this.currentTask = currentTask; }
     public void setCurrentEmployee(Personnel currentEmployee) { this.currentEmployee = currentEmployee; }
+
 }
