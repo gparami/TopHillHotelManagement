@@ -38,8 +38,6 @@
         <item>Manager</item>
         <item>Employee</item>
     </string-array>
-    <string name="title_activity_employee">EmployeeActivity</string>
-    <string name="title_activity_employees">ScrollingActivity</string>
-    <string name="action_settings">Settings</string>
+
 
 </resources>
