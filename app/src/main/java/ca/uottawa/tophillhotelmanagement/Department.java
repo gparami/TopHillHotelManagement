@@ -38,10 +38,11 @@ public class Department {
                      task = new Task("Please clean room number" + j+ " ASAP", Priority.HIGH, new Date(j*40));
                     deptTasks.add(task);
                }
+            }
             j++;
-            }}
-            return new ArrayList(deptTasks);
         }
+        return new ArrayList(deptTasks);
+    }
 
 
     public Task removeTasks(Task toRemove){
