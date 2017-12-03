@@ -45,7 +45,7 @@ public class departmentTasksHandler extends AppCompatActivity {
         });
     }
 
-    void set_employee(Task task){
+    private void set_employee(Task task){
         ((Dataset)this.getApplication()).setCurrentTask(task);
     }
 }
