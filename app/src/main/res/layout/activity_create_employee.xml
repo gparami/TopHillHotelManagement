@@ -43,7 +43,7 @@
                 android:textSize="12sp" />
 
             <EditText
-                android:id="@+id/profile_name"
+                android:id="@+id/employee_name"
                 android:layout_width="fill_parent"
                 android:layout_height="38dp"
                 android:layout_marginBottom="20dp"
@@ -61,7 +61,7 @@
                 android:textSize="12sp" />
 
             <EditText
-                android:id="@+id/profile_username"
+                android:id="@+id/employee_username"
                 android:layout_width="fill_parent"
                 android:layout_height="38dp"
                 android:layout_marginBottom="20dp"
@@ -79,7 +79,7 @@
                 android:textSize="12sp" />
 
             <EditText
-                android:id="@+id/profile_password"
+                android:id="@+id/employee_password"
                 android:layout_width="fill_parent"
                 android:layout_height="38dp"
                 android:layout_marginBottom="20dp"
@@ -97,7 +97,7 @@
                 android:textSize="12sp" />
 
             <Spinner
-                android:id="@+id/profile_department"
+                android:id="@+id/employee_department"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -116,7 +116,7 @@
                 android:textSize="12sp" />
 
             <Spinner
-                android:id="@+id/profile_role"
+                android:id="@+id/employee_role"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
