@@ -25,7 +25,7 @@ public class Department {
     public void addTask(Task in){
 
         deptTasks.add(in);}
-    public ArrayList<Task>getTasks(){
+    public ArrayList<Task> getTasks(){
           Task task;
         int j = 0;
         while (j<25)
