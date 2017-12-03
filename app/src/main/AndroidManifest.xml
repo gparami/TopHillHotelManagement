@@ -3,13 +3,13 @@
     package="ca.uottawa.tophillhotelmanagement">
 
     <application
+        android:name=".Dataset"
         android:allowBackup="true"
         android:icon="@mipmap/hotel"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".Dataset" >
+        android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
             <!-- intent of this activity is commented because it's not the launch activity, load activity is. -->
@@ -31,10 +31,11 @@
         </activity>
         <activity android:name=".EditProfile" />
         <activity android:name=".TaskHandlerActivity" />
-        <activity android:name=".DepartmentActivity" />
         <activity android:name=".ReceptionistActivity" />
         <activity android:name=".EmployeesActivity" />
         <activity android:name=".TasksActivity" />
+        <activity android:name=".activity_department_task_row" />
+        <activity android:name=".departmentTasksHandler" />
     </application>
 
 </manifest>
