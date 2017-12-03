@@ -1,7 +1,5 @@
 package ca.uottawa.tophillhotelmanagement;
-
 import android.support.v4.util.LogWriter;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -27,7 +25,7 @@ public class Department {
     public void addTask(Task in){
 
         deptTasks.add(in);}
-    public ArrayList<Task> getTasks(){
+    public ArrayList<Task>getTasks(){
           Task task;
         int j = 0;
         while (j<25)
