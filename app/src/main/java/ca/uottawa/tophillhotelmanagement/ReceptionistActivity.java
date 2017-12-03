@@ -12,10 +12,7 @@ import android.view.MenuItem;
 import android.widget.Toolbar;
 
 import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Objects;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
