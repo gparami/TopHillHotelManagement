@@ -54,7 +54,10 @@ public class LoadActivity extends AppCompatActivity {
                     } else if (Objects.equals(user.getEmail(), "manager@tophill.ca")) {
                         Intent launchNewIntent = new Intent(LoadActivity.this, MainActivity.class);
                         startActivityForResult(launchNewIntent, 0);
-                    }
+                    } else if (Objects.equals(user.getEmail(), "receptionist@tophill.ca")) {
+                        Intent launchNewIntent = new Intent(LoadActivity.this, ReceptionistActivity.class);
+                        startActivityForResult(launchNewIntent, 0);
+                }
 
                 } else {
                     //user is not sighned out
