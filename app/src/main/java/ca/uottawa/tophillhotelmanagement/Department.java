@@ -35,6 +35,9 @@ public class Department {
     public Manager manager(){
         return (Manager)manager;
     }
+    public void setManager(Personnel manager){
+        this.manager=(Manager)manager;
+    }
     public void addEmployee(Employee empl){
         int pos = 0;
         String name = empl.getName();
