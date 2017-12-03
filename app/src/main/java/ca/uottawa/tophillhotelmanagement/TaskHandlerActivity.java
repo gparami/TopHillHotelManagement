@@ -14,25 +14,25 @@ public class TaskHandlerActivity extends AppCompatActivity {
 
     Button assignEmployeeButton;
     AlertDialog employeeSelectAlertDialog;
-    ArrayList<Personnel> myStaff = ((Dataset) this.getApplication()).getStaffList();
-    CharSequence[] staffNames = EmployeeNameConversion(myStaff);
-
-    //Temporary Data
-    Department myDepartment = ((Dataset) this.getApplication()).getCurrentDepartment();
-    ArrayList<Task> myTasks = myDepartment.getTasks();
-    Task currentTask = myTasks.get(1);
+    ArrayList<Personnel> myStaff = null;
+    CharSequence[] staffNames = null;
+    Task currentTask = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_handler);
 
+
+        myStaff = ((Dataset) this.getApplication()).getStaffList();
+        staffNames = EmployeeNameConversion(myStaff);
+        currentTask = ((Dataset) this.getApplication()).getCurrentTask();
+
         assignEmployeeButton = (Button)findViewById(R.id.assignEmployeeButton);
 
         assignEmployeeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 CreateAlertDialogWithRadioButtonGroup() ;
             }
 
