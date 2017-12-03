@@ -31,11 +31,13 @@
         </activity>
         <activity android:name=".EditProfile" />
         <activity android:name=".TaskHandlerActivity" />
+        <activity android:name=".mightbeusefull" />
         <activity android:name=".ReceptionistActivity" />
         <activity android:name=".EmployeesActivity" />
         <activity android:name=".TasksActivity" />
         <activity android:name=".activity_department_task_row" />
         <activity android:name=".departmentTasksHandler" />
+        <activity android:name=".SingleEmployeeActivity" />
     </application>
 
 </manifest>

@@ -1,5 +1,7 @@
 package ca.uottawa.tophillhotelmanagement;
 
+import android.os.Parcel;
+
 import java.util.Vector;
 
 /**
@@ -29,4 +31,6 @@ public abstract class Personnel {
     public String getName() {
         return name;
     }
+
+
 }
