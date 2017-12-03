@@ -90,7 +90,7 @@ public class departmentTasksClassAdapter extends BaseAdapter {
             }
         }.start();
 
-        avatarImageView.setImageResource(R.mipmap.departmenttaskimage);
+//        avatarImageView.setImageResource(R.mipmap.departmenttaskimage);
 
 
 

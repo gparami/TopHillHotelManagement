@@ -37,7 +37,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/taskDeadline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -51,39 +51,44 @@
             android:text="Assigned To: "
             android:textSize="18sp" />
 
-        <ListView
-            android:id="@+id/listViewEmployees"
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_below="@+id/textView">
-        </ListView>
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Button
-            android:textColor="#fff"
-            android:background="@drawable/buttonstyle"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
+            android:id="@+id/assignEmployeeButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Assign Employee"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Assign Employee"
+            android:textColor="#fff" />
 
         <Button
-            android:textColor="#fff"
-            android:background="@drawable/buttonstyle"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
+            android:id="@+id/updateTaskButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Update Task"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Update Task"
+            android:textColor="#fff" />
 
         <Button
-            android:textColor="#fff"
-            android:background="@drawable/buttonstyle"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
+            android:id="@+id/archiveTaskButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Archive Task"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Archive Task"
+            android:textColor="#fff" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
