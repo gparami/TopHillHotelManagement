@@ -12,22 +12,24 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by Why am I here on 2017-12-01.
  */
 
-public class departmentAdapter extends ArrayAdapter<Department> {
-    Department[] deps;
+public class departmentAdapter extends ArrayAdapter<Task> {
+    ArrayList<Task> tasks;
     Context c;
 
-    public departmentAdapter(@NonNull Context context, /*@LayoutRes int resource,*/ Department[] d) {
+    public departmentAdapter(@NonNull Context context, /*@LayoutRes int resource,*/ ArrayList<Task> t) {
         super(context, R.layout.activity_department_tasks);//add this layout to constructor
-        deps = d;
+        tasks = t;
         c = context;
     }
 
     @Override
-    public int getCount() {return deps.length;
+    public int getCount() {return tasks.size();
     }
 
     @NonNull
@@ -47,7 +49,7 @@ public class departmentAdapter extends ArrayAdapter<Department> {
         } else {
             vH = (ViewHolder) convertView.getTag();
         }
-        Department temp = deps[position];
+        Task temp = tasks.get(position);
         vH.name.setText("NAME");
         vH.discrip.setText("disc");
         vH.img.setImageResource(R.drawable.inprosses_task);
