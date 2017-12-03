@@ -30,7 +30,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".EditProfile" />
-        <activity android:name=".TaskHandlerActivity" />
         <activity android:name=".DepartmentTasks" />
         <activity android:name=".CreateEmployee" />
         <activity android:name=".mightbeusefull" />
@@ -41,6 +40,7 @@
         <activity android:name=".departmentTasksHandler" />
         <activity android:name=".SingleEmployeeActivity" />
         <activity android:name=".Receptionist_CreateTask"/>
+        <activity android:name=".TaskHandlerActivity" />
     </application>
 
 </manifest>
