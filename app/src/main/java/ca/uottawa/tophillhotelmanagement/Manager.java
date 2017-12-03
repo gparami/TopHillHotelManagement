@@ -11,6 +11,8 @@ public class Manager extends Personnel {
     Department myDepartment;
     ArrayList<Task> myTasks;
 
+
+
     Manager(String _n, String _email, int _pic, Department d){
     super( _n, _email, _pic);
     myDepartment = d;
