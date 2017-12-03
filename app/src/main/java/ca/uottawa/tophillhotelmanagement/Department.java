@@ -30,6 +30,9 @@ public class Department {
         this.departmentName=name;
         this.manager=manager;
     }
+    public Manager manager(){
+        return (Manager)manager;
+    }
     public void addEmployee(Employee empl){
         int pos = 0;
         String name = empl.getName();
