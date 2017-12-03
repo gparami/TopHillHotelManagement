@@ -26,6 +26,8 @@ public class Department {
     }
     public Department(){
     }
+
+    //
     public Department(String name, Personnel manager){
         this.departmentName=name;
         this.manager=manager;
