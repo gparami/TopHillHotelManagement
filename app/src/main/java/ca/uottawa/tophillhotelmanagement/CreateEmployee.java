@@ -16,11 +16,11 @@ public class CreateEmployee extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_employee);
 
-        final EditText profile_name        = (EditText) findViewById(R.id.profile_name);
-        final EditText profile_username    = (EditText) findViewById(R.id.profile_username);
-        final EditText profile_password     = (EditText) findViewById(R.id.profile_password);
-        final Spinner profile_department     = (Spinner) findViewById(R.id.profile_department);
-        final Spinner profile_role        = (Spinner) findViewById(R.id.profile_role);
+        final EditText employee_name        = (EditText) findViewById(R.id.employee_name);
+        final EditText employee_username    = (EditText) findViewById(R.id.employee_username);
+        final EditText employee_password     = (EditText) findViewById(R.id.employee_password);
+        final Spinner employee_department     = (Spinner) findViewById(R.id.employee_department);
+        final Spinner employee_role        = (Spinner) findViewById(R.id.employee_role);
 
         // Create first ArrayAdapter
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -32,33 +32,33 @@ public class CreateEmployee extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        profile_department.setAdapter(adapter);
-        profile_role.setAdapter(adapter1);
+        employee_department.setAdapter(adapter);
+        employee_role.setAdapter(adapter1);
 
         Button submission = (Button) findViewById(R.id.profile_post);
         submission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String name      = profile_name.getText().toString();
-                String username     = profile_username.getText().toString();
-                String password   = profile_password.getText().toString();
+                String name      = employee_name.getText().toString();
+                String username     = employee_username.getText().toString();
+                String password   = employee_password.getText().toString();
 
                 if (TextUtils.isEmpty(name)){
-                    profile_name.setError("Enter a Name");
-                    profile_name.requestFocus();
+                    employee_name.setError("Enter a Name");
+                    employee_name.requestFocus();
                     return;
                 }
 
                 if (TextUtils.isEmpty(username)){
-                    profile_username.setError("Enter a Username");
-                    profile_username.requestFocus();
+                    employee_username.setError("Enter a Username");
+                    employee_username.requestFocus();
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)){
-                    profile_password.setError("Enter a Password");
-                    profile_password.requestFocus();
+                    employee_password.setError("Enter a Password");
+                    employee_password.requestFocus();
                     return;
                 }
             }
