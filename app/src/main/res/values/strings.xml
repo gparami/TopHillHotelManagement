@@ -19,6 +19,8 @@
     <string name="profile_department">Department</string>
     <string name="profile_role">Role</string>
     <string name="profile_button">Save</string>
+    <string name="receptionist_name">Johanna Doe</string>
+    <string name="receptionist_title">Receptionist</string>
 
     <!--Spinner Drop-down for Department-->
 
