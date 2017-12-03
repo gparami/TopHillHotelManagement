@@ -126,7 +126,7 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/profile_post"
+                android:id="@+id/employee_post"
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:layout_gravity="center"
