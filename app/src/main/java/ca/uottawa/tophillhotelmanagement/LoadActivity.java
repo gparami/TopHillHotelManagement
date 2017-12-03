@@ -13,6 +13,7 @@ package ca.uottawa.tophillhotelmanagement;
 
         import java.util.Arrays;
         import java.util.ArrayList;
+        import java.util.Iterator;
         import java.util.LinkedList;
         import java.util.Objects;
 
@@ -34,7 +35,9 @@ public class LoadActivity extends AppCompatActivity {
 
 
     public static LinkedList<Personnel> staffList ;
-    public static HotelManager bigGuy;
+    public static HotelManager hotelManager;
+    public static Manager manager;
+    public static Department currentDepartment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,25 +80,29 @@ public class LoadActivity extends AppCompatActivity {
                 }
 
                 ArrayList <Department> departments = new ArrayList<>();
-                bigGuy = new HotelManager("John Boss","admin@tophill.ca",-1,departments);
+                hotelManager = new HotelManager("John Boss","admin@tophill.ca",-1,departments);
 
                 Department cleaningDept = new CleaningDept("Cleaning Department",null);
                 departments.add(cleaningDept);
 
 
-                bigGuy.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager");
+                hotelManager.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager");
+                Iterator<Personnel> itr = staffList.iterator();
+                manager=cleaningDept.manager();
+                currentDepartment = cleaningDept;
+
 
                 //creating employees
-                bigGuy.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
-                bigGuy.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
-                bigGuy.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee");
-                bigGuy.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee");
-                bigGuy.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee");
-                bigGuy.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee");
-                bigGuy.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee");
-                bigGuy.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
-                bigGuy.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
-                staffList = bigGuy.staff;
+                hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
+                hotelManager.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
+                hotelManager.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee");
+                hotelManager.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee");
+                hotelManager.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee");
+                hotelManager.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee");
+                hotelManager.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee");
+                hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
+                hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
+                staffList = hotelManager.staff;
             }
         };
 
