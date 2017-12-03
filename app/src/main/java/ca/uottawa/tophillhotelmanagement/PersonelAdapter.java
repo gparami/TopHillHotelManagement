@@ -1,15 +1,21 @@
 package ca.uottawa.tophillhotelmanagement;
 
 import android.content.Context;
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 //import android.os.SystemClock;
@@ -20,23 +26,25 @@ import java.util.LinkedList;
  */
 
 public class PersonelAdapter extends ArrayAdapter<Personnel> {
-    LinkedList<Personnel> staff;
+    ArrayList<Personnel> staff;
     Context c;
 
-    public PersonelAdapter(@NonNull Context context, /*@LayoutRes int resource,*/ LinkedList<Personnel> s) {
+    public PersonelAdapter(@NonNull Context context, /*@LayoutRes int resource,*/ ArrayList<Personnel> s) {
         super(context, R.layout.personel_tasks_list_view);//add this layout to constructor
         staff = s;
         c = context;
     }
+
     @Override
-    public int getCount() {return staff.size();
+    public int getCount() {
+        return staff.size();
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        ViewHolder vH = null;//new ViewHolder();
+        ViewHolder vH = new ViewHolder();
 
         if (convertView == null) {
             LayoutInflater inf = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -45,17 +53,17 @@ public class PersonelAdapter extends ArrayAdapter<Personnel> {
             vH.name = (TextView) convertView.findViewById(R.id.employee_name);
             vH.email = (TextView) convertView.findViewById(R.id.email);
             convertView.setTag(vH);
-
         } else {
-            vH = (ViewHolder) convertView.getTag();
+            vH = (ViewHolder)convertView.getTag();
         }
-        Personnel temp = staff.get(position);
-        vH.name.setText("NAME");
-        vH.email.setText("email");
-        vH.img.setImageResource(R.drawable.inprosses_task);
-        //vH.img.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        // vH.c.setBase(SystemClock.elapsedRealtime());
-        //vH.c.start();
+        Personnel p = staff.get(position);
+        vH.name.setText(p.getName());
+        vH.email.setText(p.getEmail());
+        vH.img.setImageResource(R.drawable.ic_launcher);
+        vH.img.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+
+
+
         return convertView;
     }
 
@@ -64,7 +72,9 @@ public class PersonelAdapter extends ArrayAdapter<Personnel> {
         ImageView img;
         TextView name;
         TextView email;
-        // Chronometer c;
     }
 
+
+
 }
+

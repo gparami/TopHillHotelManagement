@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         departments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, DepartmentActivity.class);
+                Intent i = new Intent(MainActivity.this, mightbeusefull.class);
                 startActivity(i);
             }
         });
