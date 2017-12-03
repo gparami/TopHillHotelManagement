@@ -27,7 +27,7 @@ public class Department {
     public void addTask(Task in){
 
         deptTasks.add(in);}
-    public ArrayList<Task>getTasks(){
+    public ArrayList<Task> getTasks(){
           Task task;
         int j = 0;
         while (j<25)
@@ -55,6 +55,7 @@ public class Department {
     public Department(String name, Personnel manager){
         this.departmentName=name;
         this.manager=manager;
+        this.getTasks();
     }
     public Manager manager(){
         return (Manager)manager;
