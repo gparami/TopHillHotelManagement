@@ -18,12 +18,12 @@ import java.util.ArrayList;
  * Created by Why am I here on 2017-12-01.
  */
 
-public class departmentAdapter extends ArrayAdapter<Task> {
+public class TaskAdapter extends ArrayAdapter<Task> {
     ArrayList<Task> tasks;
     Context c;
 
-    public departmentAdapter(@NonNull Context context, /*@LayoutRes int resource,*/ ArrayList<Task> t) {
-        super(context, R.layout.activity_department_tasks);//add this layout to constructor
+    public TaskAdapter(@NonNull Context context, /*@LayoutRes int resource,*/ ArrayList<Task> t) {
+        super(context, R.layout.tasks_list_view);//add this layout to constructor
         tasks = t;
         c = context;
     }
@@ -40,10 +40,10 @@ public class departmentAdapter extends ArrayAdapter<Task> {
 
         if (convertView == null) {
             LayoutInflater inf = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inf.inflate(R.layout.activity_department_tasks, parent, false);/// creating new view to return
-            vH.img = (ImageView) convertView.findViewById(R.id.departmentTaskAvatar);
-            vH.name = (TextView) convertView.findViewById(R.id.departmentTaskName);
-            vH.discrip = (TextView) convertView.findViewById(R.id.departmentTaskDescription);
+            convertView = inf.inflate(R.layout.tasks_list_view, parent, false);/// creating new view to return
+            vH.img = (ImageView) convertView.findViewById(R.id.task_status_img);
+            vH.name = (TextView) convertView.findViewById(R.id.task_name);
+            vH.discrip = (TextView) convertView.findViewById(R.id.task_discrioption);
             convertView.setTag(vH);
 
         } else {

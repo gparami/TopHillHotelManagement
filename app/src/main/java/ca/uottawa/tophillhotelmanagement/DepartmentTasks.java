@@ -10,9 +10,9 @@ public class DepartmentTasks extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_department_tasks);
-        Department department =LoadActivity.manager.myDepartment;
-        ArrayList<Task> currentTasks = department.getTasks();
+        setContentView(R.layout.department_tasks_list_view);
+        //Department department =LoadActivity.manager.myDepartment;
+        //ArrayList<Task> currentTasks = department.getTasks();
 
 
 

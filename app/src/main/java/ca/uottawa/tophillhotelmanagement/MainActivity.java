@@ -7,10 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.view.MenuItem;
-import android.widget.Toolbar;
 
 import java.util.Arrays;
 
@@ -41,12 +39,29 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                 }
         });
-        //do buttons here
+
+        Button employees = (Button) findViewById(R.id.employee_button);
+        employees.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, EmployeesActivity.class);
+                startActivity(i);
+            }
+        });
         Button departments = (Button) findViewById(R.id.department_button);
         departments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, DepartmentTasks.class);
+                Intent i = new Intent(MainActivity.this, DepartmentActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button tasks = (Button) findViewById(R.id.my_tasks_button);
+        tasks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, TasksActivity.class);
                 startActivity(i);
             }
         });
