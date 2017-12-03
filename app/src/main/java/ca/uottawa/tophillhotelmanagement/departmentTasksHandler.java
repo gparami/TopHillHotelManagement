@@ -1,7 +1,10 @@
 package ca.uottawa.tophillhotelmanagement;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
@@ -25,19 +28,25 @@ public class departmentTasksHandler extends AppCompatActivity {
 
         final ArrayList<Task> tasks = myDepartment.getTasks();
 
-        departmentTasksClassAdapter adapter = new departmentTasksClassAdapter(this, tasks);
+        final departmentTasksClassAdapter adapter = new departmentTasksClassAdapter(this, tasks);
 
         mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                // MediaPlayer m = MediaPlayer.create(EmployeesActivity.this, customEmployeeAdapter.staff.get(i));
+                Task task =(Task) adapter.getItem(position);
+                Intent intent = new Intent(view.getContext(), TaskHandlerActivity.class);
+                set_employee(task);
+                startActivity(intent);
+            }
+        });
+    }
+
+    void set_employee(Task task){
+        ((Dataset)this.getApplication()).setCurrentTask(task);
     }
 }
 
-//// set
-//((Dataset) this.getApplication()).setHotelManager(hotelManager);
-//        ((Dataset) this.getApplication()).setStaffList(staffList);
-//        ((Dataset) this.getApplication()).setCurrentDepartment(currentDepartment);
-//        ((Dataset) this.getApplication()).setManager(manager);
-//// get
-//        HotelManager myHotelManager =  ((Dataset) this.getApplication()).getHotelManager();
-//        ArrayList<Personnel> myStaff = ((Dataset) this.getApplication()).getStaffList();
-//        Department myDepartment = ((Dataset) this.getApplication()).getCurrentDepartment();
-//        Personnel myManager = ((Dataset) this.getApplication()).getManager();
