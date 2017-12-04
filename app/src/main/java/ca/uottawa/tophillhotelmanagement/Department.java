@@ -22,26 +22,14 @@ public class Department {
     public Manager getDepartmentManager(){return (Manager)manager;}
 
     public Task createTask(String taskToName, Priority priority, Date date){return new Task(taskToName,priority,date);}
-    public void addTask(Task in){
 
-        deptTasks.add(in);}
+
+    public void addTask(Task in){
+        deptTasks.add(in);
+    }
+
     public ArrayList<Task> getTasks(){
-          Task task;
-        int j = 0;
-        while (j<25)
-        {
-            if (j%2==0){
-            task = new Task("Please clean room number " + j, Priority.LOW, new Date(j*10));
-            deptTasks.add(task);}
-            else{
-                if(j%3==0){
-                     task = new Task("Please clean room number" + j+ "", Priority.HIGH, new Date(j*40));
-                    deptTasks.add(task);
-               }
-            }
-            j++;
-        }
-        return new ArrayList(deptTasks);
+        return this.deptTasks;
     }
 
 
@@ -81,4 +69,25 @@ public class Department {
             deptEmployees.add(empl);
         }
     }
+
+    public void CreateTasks() {
+
+        Task task;
+        int j = 0;
+        while (j<25)
+        {
+            if (j%2==0){
+                task = new Task("Clean room number " + j, Priority.LOW, new Date(j*10));
+                deptTasks.add(task);}
+            else{
+                if(j%3==0){
+                    task = new Task("Clean room number" + j+ "", Priority.HIGH, new Date(j*40));
+                    deptTasks.add(task);
+                }
+            }
+            j++;
+        }
+
+    }
+
 }

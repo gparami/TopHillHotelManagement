@@ -117,9 +117,7 @@ public class TaskHandlerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 currentTask.setTaskName(taskNameET.getText().toString());
-                //IMPLEMENT ME
-//                Date date = new Date();
-//                currentTask.setDueDate(date);
+                currentTask.setDueDate(myCalendar.getTime());
                 Toast.makeText(TaskHandlerActivity.this, "Task Updated", Toast.LENGTH_SHORT).show();
             }
         });
@@ -230,4 +228,5 @@ public class TaskHandlerActivity extends AppCompatActivity {
         updateTaskButton.setClickable(true);
         updateTaskButton.setBackground(getDrawable(R.drawable.buttonstyle));
     }
+
 }
