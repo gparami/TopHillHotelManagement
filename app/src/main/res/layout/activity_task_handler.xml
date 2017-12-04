@@ -14,35 +14,55 @@
         android:paddingRight="10dp"
         android:paddingTop="5dp">
 
-        <TextView
-            android:id="@+id/textView3"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Due Date:"
-            android:textSize="18sp" />
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
 
-        <EditText
-            android:id="@+id/taskDeadline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Due Date:"
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Assigned To: "
-            android:textSize="18sp" />
+            <EditText
+                android:id="@+id/taskDeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date"
+                android:textSize="18sp" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/taskAssignedTo"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            android:textSize="18sp" />
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:text="Assigned To: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/taskAssignedTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Unassigned"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/taskHandlerTitle"

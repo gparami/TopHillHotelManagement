@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,14 +23,18 @@ public class TaskHandlerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_handler);
-
+        setTitle("Edit Task");
 
         myStaff = ((Dataset) this.getApplication()).getStaffList();
         staffNames = EmployeeNameConversion(myStaff);
         currentTask = ((Dataset) this.getApplication()).getCurrentTask();
 
-        assignEmployeeButton = (Button)findViewById(R.id.assignEmployeeButton);
+        EditText taskDeadlineET = (EditText) findViewById(R.id.taskDeadline);
 
+        EditText taskAssignedToET = (EditText) findViewById(R.id.taskAssignedTo);
+
+
+        assignEmployeeButton = (Button)findViewById(R.id.assignEmployeeButton);
         assignEmployeeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
