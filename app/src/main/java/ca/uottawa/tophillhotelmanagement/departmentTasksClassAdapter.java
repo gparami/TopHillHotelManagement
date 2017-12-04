@@ -72,14 +72,14 @@ public class departmentTasksClassAdapter extends BaseAdapter {
         detailTextView.setText(task.getTaskName());
 
 
-        int rand = ThreadLocalRandom.current().nextInt(0, 500000);
+        int rand = ThreadLocalRandom.current().nextInt(0, 5000000);
 
         new CountDownTimer(rand, 1000) {
             public void onTick(long millisUntilFinished) {
                 if (millisUntilFinished>=0){
                     Date temp = new Date();
                     temp.setTime(millisUntilFinished);
-                    SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
+                    SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
                     countDownChronometer.setText(""+sdf.format(temp));}
                 else{
                     countDownChronometer.setText("0");
