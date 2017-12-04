@@ -59,5 +59,9 @@
         <item>Will Ferrell</item>
     </string-array>
 
+    <!--Task Handler Activity-->
+    <string name="task_handler_task_name">Sample Task</string>
+    <string name="task_handler_task_deadline">Sample Task</string>
+
 
 </resources>
