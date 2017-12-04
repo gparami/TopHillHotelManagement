@@ -8,6 +8,8 @@
     <string name="unassigned">Unassigned</string>
     <string name="log_out">Log out</string>
     <string name="profile_edit">Edit Profile</string>
+    <string name="create_employee">Create New Employee</string>
+    <string name="create_task">Create New Task</string>
 
     <!--Profile Form-->
 
@@ -20,6 +22,11 @@
     <string name="profile_button">Save</string>
     <string name="receptionist_name">Johanna Doe</string>
     <string name="receptionist_title">Receptionist</string>
+    <string name="create_task_name">Task Name</string>
+    <string name="create_task_date">Due date</string>
+    <string name="create_task_priority">Priority</string>
+    <string name="create_task_assignto">Assign to:</string>
+
 
     <!--Spinner Drop-down for Department-->
 
@@ -37,6 +44,19 @@
     <string-array name="role_array">
         <item>Manager</item>
         <item>Employee</item>
+    </string-array>
+
+    <string-array name="task_array">
+        <item></item>
+        <item>Beyonce Knowles</item>
+        <item>Brad Pitt</item>
+        <item>George Clooney</item>
+        <item>Kevin Hart</item>
+        <item>Kim Kardashian</item>
+        <item>Leonardo DiCaprio</item>
+        <item>Taylor Swift</item>
+        <item>Tom Hanks</item>
+        <item>Will Ferrell</item>
     </string-array>
 
 

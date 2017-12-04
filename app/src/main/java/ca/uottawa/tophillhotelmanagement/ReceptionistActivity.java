@@ -38,6 +38,14 @@ public class ReceptionistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receptionist);
 
+        Button submission = (Button) findViewById(R.id.create_task_post);
+        submission.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ReceptionistActivity.this,Receptionist_CreateTask.class);
+                startActivity(i);
+            }
+        });
 
         //initialize Firebase staff
         mFirebaseAuth = FirebaseAuth.getInstance();
