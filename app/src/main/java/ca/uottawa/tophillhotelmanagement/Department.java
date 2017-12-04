@@ -27,15 +27,15 @@ public class Department {
         deptTasks.add(in);}
     public ArrayList<Task> getTasks(){
           Task task;
-        int j = 0;
+        int j = 2;
         while (j<25)
         {
             if (j%2==0){
-            task = new Task("Please clean room number " + j, Priority.LOW, new Date(j*10));
+            task = new Task("Clean room number " + j, Priority.LOW, new Date(j*10));
             deptTasks.add(task);}
             else{
                 if(j%3==0){
-                     task = new Task("Please clean room number" + j+ "", Priority.HIGH, new Date(j*40));
+                     task = new Task("Clean hall on" + j/2 + " floor", Priority.HIGH, new Date(j*40));
                     deptTasks.add(task);
                }
             }

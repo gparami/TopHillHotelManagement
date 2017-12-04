@@ -19,7 +19,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class EmployeesActivity extends AppCompatActivity {
-   //final Personnel emp = ((Dataset) this.getApplication()).getCurrentEmployee();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,8 +56,9 @@ public class EmployeesActivity extends AppCompatActivity {
 
                 call.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "777-777-7777"));
-                       // startActivity(intent);
+                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                        intent.setData(Uri.parse("tel:777-777-7777"));
+                        startActivity(intent);
 
                     }
                 });
