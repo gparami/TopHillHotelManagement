@@ -68,7 +68,7 @@ public class departmentTasksClassAdapter extends BaseAdapter {
 
         int taskNum = position+1;
         nameTextView.setText("Cleaning task #"+taskNum);
-
+        avatarImageView.setImageResource(R.drawable.ic_launcher);
         detailTextView.setText(task.getTaskName());
 
 

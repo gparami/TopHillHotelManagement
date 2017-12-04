@@ -35,7 +35,7 @@ public class Department {
             deptTasks.add(task);}
             else{
                 if(j%3==0){
-                     task = new Task("Please clean room number" + j+ " ASAP", Priority.HIGH, new Date(j*40));
+                     task = new Task("Please clean room number" + j+ "", Priority.HIGH, new Date(j*40));
                     deptTasks.add(task);
                }
             }
