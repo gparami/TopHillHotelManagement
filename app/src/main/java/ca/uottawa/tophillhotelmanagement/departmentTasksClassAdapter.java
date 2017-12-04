@@ -67,9 +67,14 @@ public class departmentTasksClassAdapter extends BaseAdapter {
         Task task = (Task)getItem(position);
 
         int taskNum = position+1;
-        nameTextView.setText("Cleaning task #"+taskNum);
+        //nameTextView.setText("Cleaning task #"+taskNum);
+        nameTextView.setText(task.getTaskName());
         avatarImageView.setImageResource(R.drawable.ic_launcher);
-        detailTextView.setText(task.getTaskName());
+        if (task.isAssigned()) {
+            detailTextView.setText(task.getAssignedTo().getName());
+        } else {
+            detailTextView.setText("Unassigned");
+        }
 
 
         int rand = ThreadLocalRandom.current().nextInt(0, 5000000);

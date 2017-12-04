@@ -97,6 +97,7 @@ public class LoadActivity extends AppCompatActivity {
         hotelManager.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager", -1);
         manager=cleaningDept.manager();
         currentDepartment = cleaningDept;
+        currentDepartment.CreateTasks();
         //creating employees
         hotelManager.createEmployee("Artem the Boss","artem_boss@tophill.ca","Cleaning Department","Employee", R.drawable.boss);
         hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee", R.drawable.taha);
