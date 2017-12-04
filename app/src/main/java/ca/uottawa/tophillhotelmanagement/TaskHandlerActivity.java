@@ -158,7 +158,7 @@ public class TaskHandlerActivity extends AppCompatActivity {
                         boolean deleteConfirmation = DeleteTask(currentTask);
                         if (deleteConfirmation) {
                             Toast.makeText(TaskHandlerActivity.this, "Task Deleted", Toast.LENGTH_SHORT).show();
-                            returnToDepartmentTasksActivity();
+                            finish();
                         } else {
                             Toast.makeText(TaskHandlerActivity.this, "Delete Unsuccessful", Toast.LENGTH_SHORT).show();
                         }
@@ -218,11 +218,6 @@ public class TaskHandlerActivity extends AppCompatActivity {
             }
         }
         return index;
-    }
-
-    public void returnToDepartmentTasksActivity() {
-        Intent i = new Intent(TaskHandlerActivity.this, departmentTasksHandler.class);
-        startActivity(i);
     }
 
     private void updateLabel() {
