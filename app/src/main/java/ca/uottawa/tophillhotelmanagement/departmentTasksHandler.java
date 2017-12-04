@@ -45,6 +45,35 @@ public class departmentTasksHandler extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+
+        mListView = (ListView) findViewById(R.id.department_tasks_list_view);
+
+        Department myDepartment = ((Dataset) this.getApplication()).getCurrentDepartment();
+
+        final ArrayList<Task> tasks = myDepartment.getTasks();
+
+        final departmentTasksClassAdapter adapter = new departmentTasksClassAdapter(this, tasks);
+
+        mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                // MediaPlayer m = MediaPlayer.create(EmployeesActivity.this, customEmployeeAdapter.staff.get(i));
+                Task task =(Task) adapter.getItem(position);
+                Intent intent = new Intent(view.getContext(), TaskHandlerActivity.class);
+                set_task(task);
+                startActivity(intent);
+            }
+        });
+
+
+        super.onResume();
+    }
+
     private void set_task(Task task){
         ((Dataset)this.getApplication()).setCurrentTask(task);
     }
