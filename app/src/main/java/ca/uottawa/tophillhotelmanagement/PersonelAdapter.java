@@ -59,7 +59,9 @@ public class PersonelAdapter extends ArrayAdapter<Personnel> {
         Personnel p = staff.get(position);
         vH.name.setText(p.getName());
         vH.email.setText(p.getEmail());
-        vH.img.setImageResource(R.drawable.ic_launcher);
+        if(p.picture == -1){
+        vH.img.setImageResource(R.drawable.default_avatar);}
+        else  vH.img.setImageResource(p.getPicture());
         vH.img.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
 
