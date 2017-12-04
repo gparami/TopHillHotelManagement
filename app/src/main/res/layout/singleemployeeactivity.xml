@@ -10,26 +10,26 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:padding="10dp"
+        android:layout_margin="16dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/call_employee_button"
-            android:layout_width="170dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_margin="5dp"
             android:background="@drawable/buttonstyle"
             android:text="Call Employee"
             android:textColor="#fff" />
         <Button
             android:id="@+id/send_email_emp_button"
-            android:layout_width="170dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_margin="5dp"
             android:background="@drawable/buttonstyle"
-            android:text="Call Employee"
+            android:text="Email Employee"
             android:textColor="#fff" />
 
     </LinearLayout>
