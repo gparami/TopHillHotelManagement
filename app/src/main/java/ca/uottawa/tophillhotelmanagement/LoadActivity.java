@@ -126,7 +126,12 @@ public class LoadActivity extends AppCompatActivity {
         manager.addTask(t6);
         Task t7 = new Task("Managers Meeting", HIGH, new Date(2018,2,19,5,30),manager);
         manager.addTask(t7);
-
+        Task t9 = new Task("Demo task", HIGH, new Date(2018,2,19,5,30),manager);
+        manager.addTask(t9);
+        Task t10 = new Task("Demo task", HIGH, new Date(2018,2,19,5,30),manager);
+        manager.addTask(t10);
+        Task t11 = new Task("Demo task", HIGH, new Date(2018,2,19,5,30),manager);
+        manager.addTask(t11);
 
         //
         ((Dataset) this.getApplication()).setHotelManager(hotelManager);

@@ -24,6 +24,7 @@ public class Dataset extends Application {
     public Department getCurrentDepartment() { return currentDepartment; }
     public Task getCurrentTask() { return currentTask; }
     public Personnel getCurrentEmployee() { return currentEmployee; }
+    public ArrayList<Task> getManagerTasks() { return manager.getTasks(); }
 
     public void setHotelManager(HotelManager hotelManager) { this.hotelManager = hotelManager; }
     public void setStaffList(ArrayList<Personnel> staffList) { this.staffList = staffList; }
