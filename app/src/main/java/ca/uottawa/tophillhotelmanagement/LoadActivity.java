@@ -94,19 +94,22 @@ public class LoadActivity extends AppCompatActivity {
         hotelManager = new HotelManager("John Boss","admin@tophill.ca",-1,departments);
         Department cleaningDept = new CleaningDept("Cleaning Department",null);
         departments.add(cleaningDept);
-        hotelManager.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager");
+        hotelManager.createEmployee("John Manager","manager@tophill.ca","Cleaning Department","Manager", -1);
         manager=cleaningDept.manager();
         currentDepartment = cleaningDept;
         //creating employees
-        hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee");
-        hotelManager.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee");
-        hotelManager.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee");
-        hotelManager.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee");
-        hotelManager.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee");
-        hotelManager.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee");
-        hotelManager.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee");
-        hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee");
-        hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee");
+        hotelManager.createEmployee("Artem the Boss","artem_boss@tophill.ca","Cleaning Department","Employee", R.drawable.boss);
+        hotelManager.createEmployee("Beyonce Knowles","bknowles@tophill.ca","Cleaning Department","Employee", R.drawable.taha);
+        hotelManager.createEmployee("Brad Pitt","bpitt@tophill.ca","Cleaning Department","Employee",R.drawable.bard);
+        hotelManager.createEmployee("Alex","axe@tophill.ca","Cleaning Department","Employee",R.drawable.al);
+        hotelManager.createEmployee("Omar","calmar@tophill.ca","Cleaning Department","Employee",R.drawable.om);
+        hotelManager.createEmployee("George Clooney","gcloney@tophill.ca","Cleaning Department","Employee", -1);
+        hotelManager.createEmployee("Kevin Hart","khart@tophill.ca","Cleaning Department","Employee", -1);
+        hotelManager.createEmployee("Kim Kardashian","kkardashian@tophill.ca","Cleaning Department","Employee", -1);
+        hotelManager.createEmployee("Leonardo DiCaprio","ldicaprio@tophill.ca","Cleaning Department","Employee", -1);
+        hotelManager.createEmployee("Taylor Swift","tswift@tophill.ca","Cleaning Department","Employee", -1);
+        hotelManager.createEmployee("Tom Hanks","thanks@tophill.ca","Cleaning Department","Employee", -1);
+        hotelManager.createEmployee("Will Ferrell","wferrell@tophill.ca","Cleaning Department","Employee", -1);
         staffList = hotelManager.staff;
 
         Task t1 = new Task("Managers Meeting", HIGH, new Date(2017,12,7,5,30),manager);

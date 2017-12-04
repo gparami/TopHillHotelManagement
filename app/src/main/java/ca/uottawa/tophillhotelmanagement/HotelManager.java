@@ -17,10 +17,11 @@ public class HotelManager extends Personnel {
         super( _n, _email, _pic);
         hotelDepartments = departments;
         staff = new ArrayList<>();
+        staff.ensureCapacity(20);
 
     }
 
-    public void createEmployee(String name, String username, String department, String role){
+    public void createEmployee(String name, String username, String department, String role, int pic){
         Iterator<Department> itr = hotelDepartments.iterator();
         Department employeeDepartment=null;
         Personnel newPersonnel = null;
@@ -33,7 +34,7 @@ public class HotelManager extends Personnel {
         }
 
         if(role.equals("Manager")){
-            Manager newManager = new Manager(name,username,-1,employeeDepartment);
+            Manager newManager = new Manager(name,username,pic,employeeDepartment);
 
             //newManager=employeeDepartment.getDepartmentManager();
             employeeDepartment.setManager(newManager);
@@ -41,7 +42,7 @@ public class HotelManager extends Personnel {
             //manager obj
             // depending on dept
         } else {
-            Employee newEmployee = new Employee(name,username,-1,employeeDepartment);
+            Employee newEmployee = new Employee(name,username,pic,employeeDepartment);
             //employeeDepartment.addEmployee(newEmployee);
             newPersonnel=newEmployee;
             //construct empl object
@@ -50,7 +51,7 @@ public class HotelManager extends Personnel {
 
         int pos = 0;
         while(pos<staff.size()){
-            if (staff.get(pos).getName().compareTo(name)<0){
+            if (staff.get(pos).getEmail().compareTo(username)<0){
                 pos++;
             } else {
                 staff.add(pos,newPersonnel);
