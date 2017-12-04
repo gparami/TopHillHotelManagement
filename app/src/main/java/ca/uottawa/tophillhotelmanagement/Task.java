@@ -1,4 +1,5 @@
 package ca.uottawa.tophillhotelmanagement;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -52,11 +53,19 @@ public class Task {
     public boolean isAssigned() { return isAssigned; }
     public boolean isComplete() { return isComplete; }
 
-    public void setAssignedTo(Personnel assignedTo) { this.assignedTo = assignedTo; }
+    public void setAssignedTo(Personnel assignedTo) { this.assignedTo = assignedTo; this.isAssigned = true; }
+    public void unassign() { this.assignedTo = null; this.isAssigned = false; }
     public void setTaskName(String taskName) { this.taskName = taskName; }
     public void setPriority(Priority priority) { this.priority = priority; }
     public void setDueDate(Date dueDate) { this.dueDate = dueDate; }
     public void setAssigned(boolean assigned) { isAssigned = assigned; }
     public void markComplete() { isComplete = true; }
     public void markIncomplete() { isComplete = false; }
+
+    public Calendar getCalendarDueDate(){
+        Date date = this.dueDate;
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        return cal;
+    }
 }
