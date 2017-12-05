@@ -12,10 +12,35 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textView0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=   "\n  Use Nexus 5X AVD if activities are out of view.\n\n" />
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=   "  To access a specific user role please use following credentials.\n" />
+
+        <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=   "Use one of the following accounts.\n\nHotel Manager\n     email: admin@tophill.ca \n     pwd: tophilladmin\n\nManager\n     email: manager@tophill.ca\n     pwd: tophilladmin" />
+            android:text=   "  Hotel Manager\n     email: admin@tophill.ca \n     pwd: tophilladmin\n" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=   "  Manager\n     email: admin@tophill.ca \n     pwd: tophilladmin\n" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=   "  Receptionist\n     email: receptionist@tophill.ca \n     pwd: ihatemyjob\n" />
 
     </LinearLayout>
 
